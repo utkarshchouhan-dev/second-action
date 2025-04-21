@@ -15,10 +15,10 @@ jobs:
       - name: Run tests
         run: npm test
 
-    deploy:
-      needs: test
-      runs-on: ubuntu-latest 
-      steps:
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest 
+    steps:
       - name: Get Code from Repo
         uses: actions/checkout@v4
       - name: Install nodeJS
